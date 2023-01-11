@@ -1,23 +1,26 @@
 import { Typography } from 'antd';
+import { useMemo } from 'react';
 import styled from 'styled-components';
-import Education from "../Education";
-import Projects from "../Projects";
-import Work from "../Work";
+
+import { TABS_CONFIG } from "../../config/tabs";
 
 const { Title } = Typography;
 
-const StyledTitle = styled(Title)`s
+const StyledTitle = styled(Title)`
 `;
 
 
-const Body = () => (
-    <div className="App">
-        <header className="App-header" >
-            <StyledTitle level={1}>Work</StyledTitle>
-            <Work />
-        </header>
-      </div>
-);
+const Body = ({ currTab }) => {
+    const Component = useMemo(() => TABS_CONFIG[currTab].Component, [currTab]);
+    return (
+        <div className="App">
+            <header className="App-header" >
+                <StyledTitle level={1}>{TABS_CONFIG[currTab].title}</StyledTitle>
+                <Component />
+            </header>
+        </div>
+    );
+};
 
 
 export default Body;

@@ -1,21 +1,21 @@
 import styled from "styled-components";
+import { TABS_CONFIG } from "../../config/tabs";
 
 const StyledLayout = styled.div`
-display: flex;
-justify-content: space-between;
-padding: 0 30%;
-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30%;
+    height: 30px;
 `;
 
-const Layout = () => (
+const Layout = ({ onClick }) => (
     <StyledLayout>
-        <span>Home     </span>
-        <span>Education     </span>
-        <span>Projects    </span>
-        <span>Work Experience     </span>
-        <span>Skills      </span>
+        {Object.entries(TABS_CONFIG).map(([tab, conf]) => (
+            <span key={tab} onClick={() => onClick(tab)}>
+                {conf.title}
+            </span>
+        ))}
     </StyledLayout>
-
 );
 
 
