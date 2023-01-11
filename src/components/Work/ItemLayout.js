@@ -54,6 +54,10 @@ const StyledYear = styled(Title)`
 
 const StyledDescriptionItem = styled.li`
     text-align: left;
+    ::marker {
+        font-size: 0.7em;
+        color: black;
+    }
 `;
 
 const StyledDescription = styled(Text)`
@@ -96,7 +100,7 @@ const WorkInfo = ({ ...workInfo }) => {
                     <Text type="secondary">{duration}</Text>
                 </StyledMeta>
             </StyledProjectMeta>
-            <ul>
+            <ul style={{"marginTop": "12px", "marginBottom": "36px"}}>
                 {projects.map((desc, index) => 
                     <StyledDescriptionItem key={index}>
                         <StyledDescription>{desc}</StyledDescription>
