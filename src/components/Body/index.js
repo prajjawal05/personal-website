@@ -7,6 +7,11 @@ import { TABS_CONFIG } from "../../config/tabs";
 const { Title } = Typography;
 
 const StyledTitle = styled(Title)`
+    text-align: left;
+`;
+
+const StyledContent = styled.div`
+    padding: 15px 48px 0px 24px;
 `;
 
 
@@ -16,7 +21,9 @@ const Body = ({ currTab }) => {
         <div className="App">
             <header className="App-header" >
                 <StyledTitle level={1}>{TABS_CONFIG[currTab].title}</StyledTitle>
-                <Component />
+                <StyledContent>
+                    <Component />
+                </StyledContent>
             </header>
         </div>
     );

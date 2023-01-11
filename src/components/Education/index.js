@@ -7,8 +7,8 @@ import { EDUCATION_TYPE } from './config';
 const { Panel } = Collapse;
 
 const StyledCollapse = styled(Collapse)`
-    min-width: 80%;
-    max-width: 80%;
+    /* min-width: 80%;
+    max-width: 80%; */
     background-color: #ffffff;
 `;
 
