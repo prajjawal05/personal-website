@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Typography, Image } from "antd";
+import { GithubOutlined, MailOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-design/icons";
 
 import { LINKS } from "../../config/links";
 import personalImg from '../../assets/personal.jpg';
-import { GithubOutlined, MailOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
 
@@ -90,9 +90,9 @@ const AboutMe = () => (
     <StyledAboutMe>
         <StyledLayout>
             <StyledLeft>
-                <StyledTitle level={4}>Hey, there!</StyledTitle>
+                <StyledTitle level={4}>Hey there!</StyledTitle>
                 <ul>
-                    <StyledListItem><Text type="secondary">I'm Prajjawal Agarwal, a Graduate Student in Computer Science at Stony Brook University, NY, USA and a past Software Developer Engineer - 2 🚀 from India. I love solving challenging problems, and working through the entire stack.</Text></StyledListItem>
+                    <StyledListItem><Text type="secondary">I am Prajjawal Agarwal, a Graduate Student in Computer Science at Stony Brook University, NY, USA and a past Software Developer Engineer - 2 🚀. I love solving challenging problems, and working through the entire stack.</Text></StyledListItem>
                 </ul>
                 <ul>
                     <Title level={5} style={{paddingBottom: "15px"}}>Talking about personal stuff</Title>
@@ -116,8 +116,6 @@ const AboutMe = () => (
                 </StyledSocial>
             </StyledRight>
         </StyledLayout>
-
-        
     </StyledAboutMe>
 );
 
