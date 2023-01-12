@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Typography, Image } from "antd";
 
-import homeImage from '../../assets/home.gif';
+import home from '../../assets/home.gif';
 
 const { Title } = Typography;
 
@@ -37,7 +37,7 @@ const Home = () => (
             <Title level={3} type="secondary" style={{ whiteSpace: "nowrap" }}>SOFTWARE ENGINEER</Title>
         </StyledLeft>
         <StyledRight>
-            <Image src={homeImage} preview={false} />
+            <Image src={home} style={{height: "400px"}} preview={false} />
         </StyledRight>
     </StyledLayout>
 );
