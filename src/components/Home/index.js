@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { Typography, Image } from "antd";
+import { Typography, Image, Tooltip } from "antd";
 
 import home from '../../assets/home.gif';
+import link from '../../assets/link.png';
 import { useCallback } from "react";
-import { TABS } from "../../config/tabs";
+import { TABS, TABS_CONFIG } from "../../config/tabs";
 
 const { Title } = Typography;
 
@@ -44,7 +45,11 @@ const Home = ({ navigateTo }) => {
     return (
         <StyledLayout>
             <StyledLeft>
-                <StyledTitle level={2} onClick={handleNameClick} >Prajjawal Agarwal</StyledTitle>
+                <Tooltip title={TABS_CONFIG[TABS.ABOUT_ME].title}>
+                    <StyledTitle level={2} onClick={handleNameClick} >
+                        Prajjawal Agarwal<Image src={link} style={{height: "10px", verticalAlign: "super"}} preview={false} />
+                    </StyledTitle>
+                </Tooltip>
                 <Title level={3} type="secondary" style={{ whiteSpace: "nowrap" }}>SOFTWARE ENGINEER</Title>
             </StyledLeft>
             <StyledRight>
