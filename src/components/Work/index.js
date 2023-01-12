@@ -3,18 +3,24 @@ import styled from 'styled-components';
 import WorkInfo from './ItemLayout';
 import { WORKS } from './config';
 
-const Projects = () => {
+const StyledWork = styled.div`
+    padding-left: 30px;
+    padding-right: 18px;
+    padding-top: 10px;
+`;
+
+const Work = () => {
     return (
-        <div>
+        <StyledWork>
             {WORKS.map((work, index) => (
                 <>
                     <WorkInfo key={index} {...work} />
                     {index != WORKS.length - 1 && <Divider />}
                 </>
             ))}
-        </div>
+        </StyledWork>
     );
 
 };
 
-  export default Projects;
+  export default Work;

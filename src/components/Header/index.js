@@ -30,7 +30,7 @@ const StyledDivider = styled(Divider)`
 `;
 
 const Layout = ({ onClick, currTab }) => (
-    <StyledHeader style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%' }}>
+    <StyledHeader style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', backgroundColor: 'white' }}>
       <span>Prajjawal Agarwal</span>
       <StyledRight>
         <StyledMenu

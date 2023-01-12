@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { Layout } from 'antd';
 import Header from './components/Header';
 import Body from './components/Body';
 import Footer from './components/InfoFooter';
@@ -12,11 +13,11 @@ function App() {
   const [tab, setTab] = useState(TABS.ABOUT_ME);
 
   return (
-    <>
+    <Layout style={{ backgroundColor: "white" }}>
       <Header currTab={tab} onClick={setTab}/>
       <Body currTab={tab}/>
       <Footer />
-    </>
+    </Layout>
   );
 }
 
