@@ -18,8 +18,8 @@ export const TABS = {
 
 export const TABS_CONFIG = {
     [TABS.HOME]: {
-        title: 'Home',
-        header: <div/>,
+        title: '',
+        header: '',
         Component: Home,
     },
     [TABS.ABOUT_ME]: {
