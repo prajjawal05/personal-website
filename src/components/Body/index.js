@@ -15,7 +15,7 @@ const StyledContent = styled.div`
 `;
 
 
-const Body = ({ currTab }) => {
+const Body = ({ currTab, navigateTo }) => {
     const Component = useMemo(() => TABS_CONFIG[currTab].Component, [currTab]);
     return (
         <Content>
@@ -23,7 +23,7 @@ const Body = ({ currTab }) => {
                 <header className="App-header" >
                     {!!TABS_CONFIG[currTab].header && <StyledTitle level={1}>{TABS_CONFIG[currTab].header}</StyledTitle>}
                     <StyledContent>
-                        <Component />
+                        <Component navigateTo={navigateTo} />
                     </StyledContent>
                 </header>
             </div>

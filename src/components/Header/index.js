@@ -36,10 +36,10 @@ const StyledLogo = styled(Image)`
     cursor: pointer;
 `;
 
-const Layout = ({ onClick, currTab }) => {
+const Layout = ({ navigateTo, currTab }) => {
     const handleLogoClick = useCallback(() => {
-        onClick(TABS.HOME);
-    }, [onClick]);
+        navigateTo(TABS.HOME);
+    }, [navigateTo]);
 
     return (
         <StyledHeader style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', backgroundColor: 'white' }}>
@@ -53,7 +53,7 @@ const Layout = ({ onClick, currTab }) => {
                     key: tab,
                     label: TABS_CONFIG[tab].title,
                 }))}
-                onSelect={({ key }) => onClick(key)}
+                onSelect={({ key }) => navigateTo(key)}
                 style={{ borderBottom: "none" }}
             />
             <StyledDivider type="vertical" />
@@ -67,7 +67,7 @@ const Layout = ({ onClick, currTab }) => {
                         label: <Avatar style={{ backgroundColor: '#0096FF' }} icon={<UserOutlined />} />,
                     }]}
                     style={{ borderBottom: "none" }}
-                    onSelect={({ key }) => onClick(key)}
+                    onSelect={({ key }) => navigateTo(key)}
                 />
             </Tooltip>
         </StyledRight>

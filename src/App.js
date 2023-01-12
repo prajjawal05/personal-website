@@ -14,8 +14,8 @@ function App() {
 
   return (
     <Layout style={{ backgroundColor: "white" }}>
-      <Header currTab={tab} onClick={setTab}/>
-      <Body currTab={tab}/>
+      <Header currTab={tab} navigateTo={setTab}/>
+      <Body currTab={tab} navigateTo={setTab} />
       <Footer />
     </Layout>
   );
