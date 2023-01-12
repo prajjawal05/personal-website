@@ -20,7 +20,7 @@ const Body = ({ currTab }) => {
     return (
         <div className="App">
             <header className="App-header" >
-                <StyledTitle level={1}>{TABS_CONFIG[currTab].title}</StyledTitle>
+                <StyledTitle level={1}>{TABS_CONFIG[currTab].header}</StyledTitle>
                 <StyledContent>
                     <Component />
                 </StyledContent>

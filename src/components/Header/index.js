@@ -5,17 +5,17 @@ import { TABS, TABS_CONFIG } from "../../config/tabs";
 
 const { Header } = AntLayout;
 
-const StyledLayout = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30%;
-    height: 30px;
+const StyledMenu = styled(Menu)`
+    justify-content: center;
+    .ant-menu-item {
+        font-size: 18px;
+    }
 `;
 
 const Layout = ({ onClick }) => (
     <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%' }}>
-      <Menu
-        theme="dark"
+      <StyledMenu
+        theme="light"
         mode="horizontal"
         defaultSelectedKeys={TABS.HOME}
         items={Object.entries(TABS_CONFIG).map(([tab, conf]) => ({
