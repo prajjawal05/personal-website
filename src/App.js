@@ -9,11 +9,11 @@ import { TABS } from './config/tabs';
 import './App.css';
 
 function App() {
-  const [tab, setTab] = useState(TABS.HOME);
+  const [tab, setTab] = useState(TABS.ABOUT_ME);
 
   return (
     <>
-      <Header onClick={setTab}/>
+      <Header currTab={tab} onClick={setTab}/>
       <Body currTab={tab}/>
       <Footer />
     </>

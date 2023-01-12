@@ -1,37 +1,65 @@
-import { Layout as AntLayout, Menu } from 'antd';
+import { Layout as AntLayout, Menu, Divider, Avatar, Tooltip } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
 import styled from "styled-components";
 
-import { TABS, TABS_CONFIG } from "../../config/tabs";
+import { TABS_CONFIG, CENTRAL_TABS, TABS } from "../../config/tabs";
 
 const { Header } = AntLayout;
 
-const StyledMenu = styled(Menu)`
-    justify-content: center;
+const StyledHeader = styled(Header)`
+    display: flex;
+    justify-content: space-between;
     .ant-menu-item {
-        font-size: 18px;
+        font-size: 14px;
     }
 `;
 
-const Layout = ({ onClick }) => (
-    <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%' }}>
-      <StyledMenu
-        theme="light"
-        mode="horizontal"
-        defaultSelectedKeys={TABS.HOME}
-        items={Object.entries(TABS_CONFIG).map(([tab, conf]) => ({
-          key: tab,
-          label: conf.title,
-        }))}
-        onSelect={({ key }) => onClick(key)}
-      />
-    </Header>
-//     <StyledLayout>
-//         {Object.entries(TABS_CONFIG).map(([tab, conf]) => (
-//             <span key={tab} onClick={() => onClick(tab)}>
-//                 {conf.title}
-//             </span>
-//         ))}
-//     </StyledLayout>
+const StyledMenu = styled(Menu)`
+    justify-content: flex-end;
+    min-width: 367px;
+`;
+
+const StyledRight = styled.div`
+    display: flex;
+    min-width: 300px;
+    justify-content: center;
+`;
+
+const StyledDivider = styled(Divider)`
+    height: auto;
+`;
+
+const Layout = ({ onClick, currTab }) => (
+    <StyledHeader style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%' }}>
+      <span>Prajjawal Agarwal</span>
+      <StyledRight>
+        <StyledMenu
+            theme="light"
+            mode="horizontal"
+            selectedKeys={[currTab]}
+            items={CENTRAL_TABS.map(tab => ({
+                key: tab,
+                label: TABS_CONFIG[tab].title,
+            }))}
+            onSelect={({ key }) => onClick(key)}
+            style={{ borderBottom: "none" }}
+        />
+        <StyledDivider type="vertical" />
+        <Tooltip title={"About Me"}>
+            <Menu
+                theme="light"
+                mode="horizontal"
+                selectedKeys={[currTab]}
+                items={[{
+                    key: TABS.ABOUT_ME,
+                    label: <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />,
+                }]}
+                style={{ borderBottom: "none" }}
+                onSelect={({ key }) => onClick(key)}
+            />
+        </Tooltip>
+      </StyledRight>
+    </StyledHeader>
 );
 
 
