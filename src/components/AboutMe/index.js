@@ -73,7 +73,7 @@ const Github = () => (
 const Instagram = () => (
 <a
     className="App-link"
-    href={LINKS.GITHUB}
+    href={LINKS.INSTAGRAM}
     target="_blank"
     rel="noopener noreferrer"><InstagramOutlined/></a>
   );
