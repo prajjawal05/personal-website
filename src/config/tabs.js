@@ -24,27 +24,27 @@ export const TABS_CONFIG = {
     },
     [TABS.ABOUT_ME]: {
         title: 'About Me',
-        header: <div><IdcardTwoTone/> About Me</div>,
+        header: <div><IdcardTwoTone/>&nbsp;&nbsp;About Me</div>,
         Component: AboutMe,
     },
     [TABS.EDUCATION]: {
         title: 'Education',
-        header: <div><BookTwoTone/> Education</div>,
+        header: <div><BookTwoTone/>&nbsp;&nbsp;Education</div>,
         Component: Education,
     },
     [TABS.PROJECTS]: {
         title: 'Projects',
-        header: <div><CodeTwoTone/> Projects</div>,
+        header: <div><CodeTwoTone/>&nbsp;&nbsp;Projects</div>,
         Component: Projects,
     },
     [TABS.WORK_EX]: {
         title: 'Experience',
-        header: <div><PullRequestOutlined/> Experience</div>,
+        header: <div><PullRequestOutlined/>&nbsp;&nbsp;Experience</div>,
         Component: Work,
     },
     [TABS.SKILLS]: {
         title: 'Skills',
-        header: <div><SettingTwoTone/> Skills</div>,
+        header: <div><SettingTwoTone/>&nbsp;&nbsp;Skills</div>,
         Component: Skills,
     }
 };

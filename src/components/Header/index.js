@@ -64,7 +64,7 @@ const Layout = ({ onClick, currTab }) => {
                     selectedKeys={[currTab]}
                     items={[{
                         key: TABS.ABOUT_ME,
-                        label: <Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />,
+                        label: <Avatar style={{ backgroundColor: '#0096FF' }} icon={<UserOutlined />} />,
                     }]}
                     style={{ borderBottom: "none" }}
                     onSelect={({ key }) => onClick(key)}
