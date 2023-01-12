@@ -10,7 +10,7 @@ import { TABS } from './config/tabs';
 import './App.css';
 
 function App() {
-  const [tab, setTab] = useState(TABS.ABOUT_ME);
+  const [tab, setTab] = useState(TABS.HOME);
 
   return (
     <Layout style={{ backgroundColor: "white" }}>

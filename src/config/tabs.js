@@ -2,11 +2,13 @@ import { BookTwoTone, IdcardTwoTone, PullRequestOutlined, SettingTwoTone, CodeTw
 
 import AboutMe from '../components/AboutMe';
 import Education from '../components/Education';
+import Home from '../components/Home';  
 import Projects from '../components/Projects';
 import Work from '../components/Work';
 import Skills from '../components/Skills';
 
 export const TABS = {
+    HOME: 'HOME',
     ABOUT_ME: 'ABOUT_ME',
     EDUCATION: 'EDUCATION',
     PROJECTS: 'PROJECTS',
@@ -15,6 +17,11 @@ export const TABS = {
 };
 
 export const TABS_CONFIG = {
+    [TABS.HOME]: {
+        title: 'Home',
+        header: <div/>,
+        Component: Home,
+    },
     [TABS.ABOUT_ME]: {
         title: 'About Me',
         header: <div><IdcardTwoTone/> About Me</div>,
