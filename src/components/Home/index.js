@@ -50,7 +50,7 @@ const Home = ({ navigateTo }) => {
                         Prajjawal Agarwal<Image src={link} style={{height: "10px", verticalAlign: "super"}} preview={false} />
                     </StyledTitle>
                 </Tooltip>
-                <Title level={3} type="secondary" style={{ whiteSpace: "nowrap" }}>SOFTWARE ENGINEER</Title>
+                <Title level={3} type="secondary" style={{ whiteSpace: "nowrap", margin: "12px 0" }}>SOFTWARE ENGINEER</Title>
             </StyledLeft>
             <StyledRight>
                 <Image src={home} style={{height: "400px"}} preview={false} />
