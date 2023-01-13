@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Typography, Image } from "antd";
-import { GithubOutlined, MailOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-design/icons";
+import { GithubOutlined, MailOutlined, InstagramOutlined, LinkedinOutlined, ContainerOutlined } from "@ant-design/icons";
 
 import { LINKS } from "../../config/links";
 import personalImg from '../../assets/personal.jpg';
@@ -78,6 +78,14 @@ const Instagram = () => (
     rel="noopener noreferrer"><InstagramOutlined/></a>
   );
 
+  const Resume = () => (
+    <a
+    className="App-link"
+    href={LINKS.RESUME}
+    target="_blank"
+    rel="noopener noreferrer"><ContainerOutlined/></a>
+    );
+
 const Email = () => (
 <a
     className="App-link"
@@ -113,6 +121,9 @@ const AboutMe = () => (
                         <Github /> &nbsp;
                         <Email />
                     </StyledLinks>
+                    <div>
+                        <Text>Resume here:&nbsp;<Resume/></Text>
+                    </div>
                 </StyledSocial>
             </StyledRight>
         </StyledLayout>
