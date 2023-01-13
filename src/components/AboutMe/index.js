@@ -122,7 +122,7 @@ const AboutMe = () => (
                         <Email />
                     </StyledLinks>
                     <div>
-                        <Text>Resume here:&nbsp;<Resume/></Text>
+                        <Text>Resume:&nbsp;<Resume/></Text>
                     </div>
                 </StyledSocial>
             </StyledRight>
