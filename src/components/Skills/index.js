@@ -1,21 +1,47 @@
-import { Image } from 'antd';
+import { Image, Typography, Divider, Tooltip } from 'antd';
 import styled from 'styled-components';
+import { SKILLS_CONFIG } from './config';
 
-import constructionImg from '../../assets/under-construction.jpeg';
+const { Title } = Typography;
 
-const StyledImage = styled.div`
+const StyledSkills = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-left: 30px;
+    padding-right: 18px;
+    padding-top: 10px;
+`;
+
+const StyledLogos = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+`;
+
+const StyledImage = styled(Image)`
+    margin-left: 10px;
+    margin-right: 10px;
 `;
 
 const Skills = () => (
-    <StyledImage>
-        <Image preview={false} src={constructionImg} style={{height: "680px", width: "980px"}}/>
-    </StyledImage>
+    <StyledSkills>
+        {Object.entries(SKILLS_CONFIG).map(([type, config]) => (
+            <div key={type} style={{ marginBottom: "10px" }}>
+                <Title level={3} style={{textAlign: "left"}}>{config.title}</Title>
+                <Divider style={{marginTop: "0px"}} />
+                <StyledLogos>
+                    {config.stacks.map(({name, logo}) => (
+                        <Tooltip title={name}>
+                            <StyledImage preview={false} src={logo} style={{height: "40px", width: "40px"}}/>
+                        </Tooltip>
+                    ))}
+                </StyledLogos>
+            </div>
+        ))}
+    </StyledSkills>
 );
 
 export default Skills;
 
-// Todo: work on Skills section
 // Todo: add a link to the resume
