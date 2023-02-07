@@ -26,10 +26,11 @@ export const EDUCATION_CONFIG = {
         LOCATION: 'NY, USA',
         DURATION: 'Aug 2022 - May 2024',
         RELEVANT_COURSES: [
-            'Distributed Systems', 'Human Computer Interaction'
+            'Distributed Systems', 'Human Computer Interaction', 'Operating Systems', 'Data Visualisation'
         ],
         EXTRA_CURRICULARS: [
-            'Teaching Assistant for Programming Abstractions - CSE 216 (2022).'
+            'Graduate Research Assistant with File Systems and Storage Lab under Prof. Erez Zadok.',
+            'Graduate Teaching Assistant for Programming Abstractions - CSE 216 under Prof. Ritwik Banerjee.',
         ],
     }
 }

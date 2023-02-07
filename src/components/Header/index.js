@@ -43,7 +43,7 @@ const Layout = ({ navigateTo, currTab }) => {
 
     return (
         <StyledHeader style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', backgroundColor: 'white' }}>
-        <StyledLogo src={logo} style={{ height: "45px" }} preview={false} onClick={handleLogoClick} />
+        <StyledLogo src={logo} style={{ height: "45px", width: "auto" }} preview={false} onClick={handleLogoClick} />
         <StyledRight>
             <StyledMenu
                 theme="light"

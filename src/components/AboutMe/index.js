@@ -111,7 +111,7 @@ const AboutMe = () => (
                 </ul>
             </StyledLeft>
             <StyledRight>
-                <Image src={personalImg} style={{height: "400px"}} preview={false} />
+                <Image src={personalImg} style={{height: "400px", width: "auto"}} preview={false} />
                 <br/>
                 <StyledSocial>
                     <Text>Connect with me</Text>

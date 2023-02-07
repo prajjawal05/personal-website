@@ -47,13 +47,13 @@ const Home = ({ navigateTo }) => {
             <StyledLeft>
                 <Tooltip title={TABS_CONFIG[TABS.ABOUT_ME].title}>
                     <StyledTitle level={2} onClick={handleNameClick} >
-                        Prajjawal Agarwal<Image src={link} style={{height: "10px", verticalAlign: "super"}} preview={false} />
+                        Prajjawal Agarwal<Image src={link} style={{height: "10px", verticalAlign: "super", width: "auto"}} preview={false} />
                     </StyledTitle>
                 </Tooltip>
                 <Title level={3} type="secondary" style={{ whiteSpace: "nowrap", margin: "12px 0" }}>SOFTWARE ENGINEER</Title>
             </StyledLeft>
             <StyledRight>
-                <Image src={home} style={{height: "400px"}} preview={false} />
+                <Image src={home} style={{height: "400px", width: "auto"}} preview={false} />
             </StyledRight>
         </StyledLayout>
     );
