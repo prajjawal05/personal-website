@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 
-import { Layout as AntLayout, Menu, Divider, Avatar, Tooltip, Image } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { Layout as AntLayout, Menu, Image } from 'antd';
 import styled from "styled-components";
+import { Link } from "react-scroll";
 import logo from '../../assets/logo.png';
 import { TABS_CONFIG, CENTRAL_TABS, TABS } from "../../config/tabs";
 
@@ -18,7 +18,7 @@ const StyledHeader = styled(Header)`
 
 const StyledMenu = styled(Menu)`
     justify-content: flex-end;
-    min-width: 367px;
+    min-width: 420px;
 `;
 
 const StyledRight = styled.div`
@@ -27,50 +27,65 @@ const StyledRight = styled.div`
     justify-content: center;
 `;
 
-const StyledDivider = styled(Divider)`
-    height: auto;
-`;
 
 const StyledLogo = styled(Image)`
     height: 45px;
     cursor: pointer;
 `;
 
-const Layout = ({ navigateTo, currTab }) => {
-    const handleLogoClick = useCallback(() => {
-        navigateTo(TABS.HOME);
-    }, [navigateTo]);
-
+const Layout = () => {
     return (
-        <StyledHeader style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', backgroundColor: 'white' }}>
-        <StyledLogo src={logo} style={{ height: "45px", width: "auto" }} preview={false} onClick={handleLogoClick} />
-        <StyledRight>
-            <StyledMenu
-                theme="light"
-                mode="horizontal"
-                selectedKeys={[currTab]}
-                items={CENTRAL_TABS.map(tab => ({
-                    key: tab,
-                    label: TABS_CONFIG[tab].title,
-                }))}
-                onSelect={({ key }) => navigateTo(key)}
-                style={{ borderBottom: "none" }}
-            />
-            <StyledDivider type="vertical" />
-            <Tooltip title={TABS_CONFIG[TABS.ABOUT_ME].title}>
-                <Menu
+        <StyledHeader style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', backgroundColor: '#f5f5f5' }}>
+            <Link activeClass="active"
+                to={TABS.HOME}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
+                <StyledLogo src={logo} style={{ height: "45px", width: "auto" }} preview={false} />
+            </Link>
+            <StyledRight>
+                <StyledMenu
                     theme="light"
                     mode="horizontal"
-                    selectedKeys={[currTab]}
-                    items={[{
-                        key: TABS.ABOUT_ME,
-                        label: <Avatar style={{ backgroundColor: '#0096FF' }} icon={<UserOutlined />} />,
-                    }]}
-                    style={{ borderBottom: "none" }}
-                    onSelect={({ key }) => navigateTo(key)}
+                    items={CENTRAL_TABS.map(tab => ({
+                        key: tab,
+                        label: (
+                            <Link activeClass="active"
+                                to={tab}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}>
+                                {TABS_CONFIG[tab].menuTitle || TABS_CONFIG[tab].title}
+                            </Link>
+                        ),
+                    }))}
+                    style={{ borderBottom: "none", backgroundColor: "#f5f5f5" }}
                 />
-            </Tooltip>
-        </StyledRight>
+                {/* <StyledDivider type="vertical" />
+                <Tooltip title={TABS_CONFIG[TABS.ABOUT_ME].title}>
+                    <Menu
+                        theme="light"
+                        mode="horizontal"
+                        items={[{
+                            key: TABS.ABOUT_ME,
+                            label: (
+                                <Link activeClass="active"
+                                    to={TABS.ABOUT_ME}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}>
+
+                                </Link>
+                            ),
+                        }]}
+                        style={{ borderBottom: "none", backgroundColor: "#f5f5f5" }}
+                        onSelect={({ key }) => navigateTo(key)}
+                    />
+                </Tooltip> */}
+            </StyledRight>
         </StyledHeader>
     );
 }

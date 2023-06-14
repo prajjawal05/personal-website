@@ -24,15 +24,15 @@ const Projects = () => {
                 defaultActiveKey={years[0]}
                 className="site-collapse-custom-collapse"
             >
-            {years.map(year => (
-                <Panel header={<Header year={year} />} key={year}>
-                    <Content year={year} />
-                </Panel>
-            ))}
+                {years.map(year => (
+                    <Panel header={<Header year={year} />} key={year}>
+                        <Content year={year} />
+                    </Panel>
+                ))}
             </StyledCollapse>
         </>
     );
 
 };
 
-  export default Projects;
+export default Projects;

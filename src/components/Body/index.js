@@ -2,33 +2,34 @@ import { Typography, Layout } from 'antd';
 import { useMemo } from 'react';
 import styled from 'styled-components';
 
+import Fade from "react-reveal/Fade";
+
 import { TABS_CONFIG } from "../../config/tabs";
 
-const {Content} = Layout;
+const { Content } = Layout;
 const { Title } = Typography;
 
 const StyledTitle = styled(Title)`
     text-align: left;
 `;
 
-const StyledContent = styled.div`
+const StyledContent = styled(Fade)`
 `;
 
-
-const Body = ({ currTab, navigateTo }) => {
-    const Component = useMemo(() => TABS_CONFIG[currTab].Component, [currTab]);
-    return (
-        <Content>
+const Body = () => {
+    // const Component = useMemo(() => TABS_CONFIG[currTab].Component, [currTab]);
+    return useMemo(() => Object.entries(TABS_CONFIG).map(([tab, { header, Component }]) => (
+        <Content id={tab}>
             <div className="App">
                 <header className="App-header" >
-                    {!!TABS_CONFIG[currTab].header && <StyledTitle level={1}>{TABS_CONFIG[currTab].header}</StyledTitle>}
+                    {!!header && <StyledTitle level={1}>{header}</StyledTitle>}
                     <StyledContent>
-                        <Component navigateTo={navigateTo} />
+                        <Component />
                     </StyledContent>
                 </header>
             </div>
         </Content>
-    );
+    )), []);
 };
 
 

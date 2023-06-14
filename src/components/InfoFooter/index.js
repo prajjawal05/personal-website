@@ -10,39 +10,24 @@ const { Footer: AntFooter } = AntLayout;
 const StyledFooter = styled(AntFooter)`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 `;
 
-const StyledConnection = styled(Text)`
-  display: flex;
-  justify-content: center;
-
-`
-const LinkedIn = () => (
+const Email = () => (
   <a
     className="App-link"
-    href={LINKS.LINKEDIN}
+    href={LINKS.EMAIL}
+    style={{ cursor: "pointer" }}
     target="_blank"
-    rel="noopener noreferrer">LinkedIn</a>
+    rel="noopener noreferrer">here</a>
 );
 
-const Github = () => (
-  <a
-    className="App-link"
-    href={LINKS.GITHUB}
-    target="_blank"
-    rel="noopener noreferrer">Github</a>
-);
- 
 const Footer = () => (
-    <StyledFooter style={{ position: 'sticky', bottom: 0, zIndex: 1, width: '100%' }}>
-        <Text>
-          Made with React <HeartTwoTone/>.
-        </Text>
-        <Text>
-          Connect with me over: &nbsp; <LinkedIn/> <Divider type="vertical" style={{'background-color':'black'}}/> <Github/>
-        </Text>
-    </StyledFooter>
+  <StyledFooter style={{ position: 'sticky', bottom: 0, zIndex: 1, width: '100%', height: '50px', paddingTop: '15px' }}>
+    <Text>
+      Email me <Email />
+    </Text>
+  </StyledFooter>
 );
 
 export default Footer;
