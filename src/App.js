@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Layout style={{ backgroundColor: "white" }}>
-      <Header currTab={tab} navigateTo={setTab}/>
+      <Header currTab={tab} navigateTo={setTab} />
       <Body currTab={tab} navigateTo={setTab} />
       <Footer />
     </Layout>
@@ -22,3 +22,13 @@ function App() {
 }
 
 export default App;
+
+/* Todos:
+1. Make it mobile responsive?
+2. highlight the current area on the header.
+3. dark mode?
+4. complete the details.
+5. add padding.
+6. look into more websites.
+7. say something different about the skills (add a tooltip probably stating the familiarity)
+*/
