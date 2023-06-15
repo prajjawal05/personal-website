@@ -1,10 +1,11 @@
-import { useCallback } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Layout as AntLayout, Menu, Image } from 'antd';
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import logo from '../../assets/logo.png';
 import { TABS_CONFIG, CENTRAL_TABS, TABS } from "../../config/tabs";
+import { isElementInView } from '../../utils';
 
 const { Header } = AntLayout;
 
@@ -34,6 +35,14 @@ const StyledLogo = styled(Image)`
 `;
 
 const Layout = () => {
+    const [activeTab, setActiveTab] = useState(TABS.HOME);
+
+    useEffect(() => {
+        window.addEventListener("scroll", (e) => {
+            const active = Object.keys(TABS_CONFIG).findLast(isElementInView);
+            setActiveTab(active);
+        }, [])
+    });
     return (
         <StyledHeader style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', backgroundColor: '#f5f5f5' }}>
             <Link activeClass="active"
@@ -61,30 +70,9 @@ const Layout = () => {
                             </Link>
                         ),
                     }))}
+                    selectedKeys={[activeTab]}
                     style={{ borderBottom: "none", backgroundColor: "#f5f5f5" }}
                 />
-                {/* <StyledDivider type="vertical" />
-                <Tooltip title={TABS_CONFIG[TABS.ABOUT_ME].title}>
-                    <Menu
-                        theme="light"
-                        mode="horizontal"
-                        items={[{
-                            key: TABS.ABOUT_ME,
-                            label: (
-                                <Link activeClass="active"
-                                    to={TABS.ABOUT_ME}
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}>
-
-                                </Link>
-                            ),
-                        }]}
-                        style={{ borderBottom: "none", backgroundColor: "#f5f5f5" }}
-                        onSelect={({ key }) => navigateTo(key)}
-                    />
-                </Tooltip> */}
             </StyledRight>
         </StyledHeader>
     );
