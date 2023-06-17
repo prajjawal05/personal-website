@@ -21,14 +21,14 @@ const StyledLinks = styled.div`
 
 const StyledGithub = styled.a`
     color: black;
-    &hover {
+    &Lhover {
         color: blue;
     }
 `;
 
 const StyledEmail = styled.a`
     color: red;
-    &hover {
+    &:hover {
         color: blue;
     }
 `;

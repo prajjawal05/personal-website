@@ -1,6 +1,5 @@
 export function isElementInView(elementId) {
     const el = document.getElementById(elementId);
-    console.log(elementId, el);
     if (!el) {
         return false;
     }
