@@ -10,6 +10,7 @@ import Socials from "../Socials";
 import { LINKS } from "../../config/links";
 
 import home from '../../assets/home.gif';
+// import home from '../../assets/night-home.gif';
 import { TABS } from "../../config/tabs";
 
 const { Text, Title } = Typography;
@@ -31,11 +32,14 @@ const StyledRight = styled.div`
     flex-direction: column;
     justify-content: center;
 `;
+// #1d2536
+// #263249
 
 const StyledTitle = styled(Title)`
     letter-spacing: 4px;
     white-space: nowrap;
     padding-left: 50px;
+    // color: white;
 `;
 
 const StyledMore = styled(Title)`

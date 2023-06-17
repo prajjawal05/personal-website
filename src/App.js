@@ -14,6 +14,7 @@ function App() {
 
   return (
     <Layout style={{ backgroundColor: "white" }}>
+      {/* <Layout style={{ backgroundColor: "#263249" }}> */}
       <Header currTab={tab} navigateTo={setTab} />
       <Body currTab={tab} navigateTo={setTab} />
       <Footer />
@@ -25,10 +26,11 @@ export default App;
 
 /* Todos:
 1. Make it mobile responsive?
-2. highlight the current area on the header.
+2. contact me page at the end, and go to beginning at the bottom.
 3. dark mode?
 4. complete the details.
-5. add padding.
-6. look into more websites.
-7. say something different about the skills (add a tooltip probably stating the familiarity)
+5. say something different about the skills (add a tooltip probably stating the familiarity).
+6. change photo.
+7. change resume
+8. modify experience section
 */
