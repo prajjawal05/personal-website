@@ -26,10 +26,9 @@ export default App;
 
 /* Todos:
 1. Make it mobile responsive?
-2. contact me page at the end.
-3. dark mode?
-4. complete the details.
-5. say something different about the skills (add a tooltip probably stating the familiarity).
-6. change resume
-7. modify experience section
+2. dark mode?
+3. complete the details.
+4. say something different about the skills (add a tooltip probably stating the familiarity).
+5. change resume
+6. modify experience section
 */

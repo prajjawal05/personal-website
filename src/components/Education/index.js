@@ -17,18 +17,18 @@ const Education = () => (
     <>
         <StyledCollapse
             bordered={false}
-            defaultActiveKey={['1']}
+            defaultActiveKey={['1', '2']}
             //   expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
             className="site-collapse-custom-collapse"
         >
-        <Panel header={<Header type={EDUCATION_TYPE.MS} />} key="1" className="site-collapse-custom-panel">
-            <Content type={EDUCATION_TYPE.MS} />
-        </Panel>
-        <Panel header={<Header type={EDUCATION_TYPE.UNDERGRAD} />} key="2" className="site-collapse-custom-panel">
-            <Content type={EDUCATION_TYPE.UNDERGRAD} />
-        </Panel>
+            <Panel header={<Header type={EDUCATION_TYPE.MS} />} key="1" className="site-collapse-custom-panel">
+                <Content type={EDUCATION_TYPE.MS} />
+            </Panel>
+            <Panel header={<Header type={EDUCATION_TYPE.UNDERGRAD} />} key="2" className="site-collapse-custom-panel">
+                <Content type={EDUCATION_TYPE.UNDERGRAD} />
+            </Panel>
         </StyledCollapse>
     </>
-  );
+);
 
-  export default Education;
+export default Education;

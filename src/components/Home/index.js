@@ -45,7 +45,6 @@ const StyledTitle = styled(Title)`
 const StyledMore = styled(Title)`
     letter-spacing: 2px;
     white-space: nowrap;
-    padding-left: 50px;
     cursor: pointer;
     color: black;
     &: hover {

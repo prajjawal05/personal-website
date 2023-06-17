@@ -25,7 +25,6 @@ const StyledContent = styled(Content)`
 const StyledMore = styled(Title)`
     letter-spacing: 2px;
     white-space: nowrap;
-    padding-left: 50px;
     cursor: pointer;
     color: black;
     &: hover {
@@ -55,7 +54,7 @@ const Body = () => {
                     offset={-70}
                     duration={500}
                 >
-                    <StyledMore level={4} style={{ textAlign: "center" }}>
+                    <StyledMore level={4}>
                         <Jump forever animation="fromBottom" maxHeight={5} duration={1500}>
                             <UpOutlined />
                         </Jump>

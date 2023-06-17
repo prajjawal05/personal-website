@@ -7,6 +7,7 @@ import Home from '../components/Home';
 import Projects from '../components/Projects';
 import Work from '../components/Work';
 import Skills from '../components/Skills';
+import Conclusion from '../components/Conclusion';
 
 export const TABS = {
     HOME: 'HOME',
@@ -14,7 +15,8 @@ export const TABS = {
     EDUCATION: 'EDUCATION',
     PROJECTS: 'PROJECTS',
     WORK_EX: 'WORK_EX',
-    SKILLS: 'SKILLS'
+    SKILLS: 'SKILLS',
+    CONCLUSION: 'CONCLUSION'
 };
 
 export const TABS_CONFIG = {
@@ -48,7 +50,15 @@ export const TABS_CONFIG = {
         title: 'Skills',
         header: <div><SettingTwoTone />&nbsp;&nbsp;Skills</div>,
         Component: Skills,
+    },
+    [TABS.CONCLUSION]: {
+        title: '',
+        header: <div></div>,
+        Component: Conclusion,
     }
 };
 
 export const CENTRAL_TABS = [TABS.EDUCATION, TABS.PROJECTS, TABS.WORK_EX, TABS.SKILLS, TABS.ABOUT_ME];
+export const HOME_TABS_ORDER = [
+    TABS.HOME, TABS.ABOUT_ME, TABS.EDUCATION, TABS.PROJECTS, TABS.WORK_EX, TABS.SKILLS, TABS.CONCLUSION
+]
