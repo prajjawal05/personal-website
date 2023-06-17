@@ -1,5 +1,4 @@
-import { Divider, Layout as AntLayout, Typography } from 'antd';
-import { HeartTwoTone } from '@ant-design/icons';
+import { Layout as AntLayout, Typography } from 'antd';
 import styled from 'styled-components';
 
 import { LINKS } from '../../config/links';

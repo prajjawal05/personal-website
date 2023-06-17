@@ -26,7 +26,7 @@ export default App;
 
 /* Todos:
 1. Make it mobile responsive?
-2. contact me page at the end, and go to beginning at the bottom.
+2. contact me page at the end.
 3. dark mode?
 4. complete the details.
 5. say something different about the skills (add a tooltip probably stating the familiarity).
