@@ -30,7 +30,6 @@ export default App;
 3. dark mode?
 4. complete the details.
 5. say something different about the skills (add a tooltip probably stating the familiarity).
-6. change photo.
-7. change resume
-8. modify experience section
+6. change resume
+7. modify experience section
 */

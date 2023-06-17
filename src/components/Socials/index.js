@@ -18,6 +18,21 @@ const StyledLinks = styled.div`
     flex-direction: row;
     justify-content: center;
 `;
+
+const StyledGithub = styled.a`
+    color: black;
+    &hover {
+        color: blue;
+    }
+`;
+
+const StyledEmail = styled.a`
+    color: red;
+    &hover {
+        color: blue;
+    }
+`;
+
 const LinkedIn = () => (
     <a
         className="App-link"
@@ -27,33 +42,25 @@ const LinkedIn = () => (
 );
 
 const Github = () => (
-    <a
+    <StyledGithub
         className="App-link"
         href={LINKS.GITHUB}
         target="_blank"
-        rel="noopener noreferrer"><GithubOutlined /></a>
-);
-
-const Instagram = () => (
-    <a
-        className="App-link"
-        href={LINKS.INSTAGRAM}
-        target="_blank"
-        rel="noopener noreferrer"><InstagramOutlined /></a>
+        rel="noopener noreferrer"><GithubOutlined /></StyledGithub>
 );
 
 const Email = () => (
-    <a
+    <StyledEmail
         className="App-link"
         href={LINKS.EMAIL}
         target="_blank"
-        rel="noopener noreferrer"><MailOutlined /></a>
+        rel="noopener noreferrer"><MailOutlined /></StyledEmail>
 );
 
 
 const Socials = () => (
     <StyledSocial>
-        <Text>Connect with me</Text>
+        <Text>Connect with me here:</Text>
         <StyledLinks>
             <LinkedIn /> &nbsp;
             {/* <Instagram /> &nbsp; */}
