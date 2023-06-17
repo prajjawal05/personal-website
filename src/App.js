@@ -31,4 +31,5 @@ export default App;
 4. say something different about the skills (add a tooltip probably stating the familiarity).
 5. change resume
 6. modify experience section
+7. modify about me.
 */

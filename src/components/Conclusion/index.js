@@ -15,7 +15,7 @@ const StyledConc = styled.div`
 
 const Conclusion = () => (
     <StyledConc>
-        <Title level={2}>Want to have a chat?</Title>
+        <Title level={2}>Want to have a chat? I'd be more than happy to talk.</Title>
         <br />
         <Socials />
     </StyledConc>

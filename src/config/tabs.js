@@ -36,15 +36,15 @@ export const TABS_CONFIG = {
         header: <div><BookTwoTone />&nbsp;&nbsp;Education</div>,
         Component: Education,
     },
-    [TABS.PROJECTS]: {
-        title: 'Projects',
-        header: <div><CodeTwoTone />&nbsp;&nbsp;Projects</div>,
-        Component: Projects,
-    },
     [TABS.WORK_EX]: {
         title: 'Experience',
         header: <div><PullRequestOutlined />&nbsp;&nbsp;Experience</div>,
         Component: Work,
+    },
+    [TABS.PROJECTS]: {
+        title: 'Projects',
+        header: <div><CodeTwoTone />&nbsp;&nbsp;Projects</div>,
+        Component: Projects,
     },
     [TABS.SKILLS]: {
         title: 'Skills',
@@ -58,7 +58,7 @@ export const TABS_CONFIG = {
     }
 };
 
-export const CENTRAL_TABS = [TABS.EDUCATION, TABS.PROJECTS, TABS.WORK_EX, TABS.SKILLS, TABS.ABOUT_ME];
+export const CENTRAL_TABS = [TABS.EDUCATION, TABS.WORK_EX, TABS.PROJECTS, TABS.SKILLS, TABS.ABOUT_ME];
 export const HOME_TABS_ORDER = [
     TABS.HOME, TABS.ABOUT_ME, TABS.EDUCATION, TABS.PROJECTS, TABS.WORK_EX, TABS.SKILLS, TABS.CONCLUSION
 ]
