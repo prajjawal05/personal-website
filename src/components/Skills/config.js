@@ -28,7 +28,7 @@ import aws from '../../assets/aws.jpeg';
 import graphql from '../../assets/graphql.png';
 import grpc from '../../assets/grpc.png';
 import kuber from '../../assets/kuber.png';
-import kafka from '../../assets/kafka.jpeg';
+import kafka from '../../assets/kafka.png';
 
 
 const SKILL_TYPE = {
