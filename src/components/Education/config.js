@@ -29,8 +29,7 @@ export const EDUCATION_CONFIG = {
             'Distributed Systems', 'Human Computer Interaction', 'Operating Systems', 'Data Visualisation'
         ],
         EXTRA_CURRICULARS: [
-            'Graduate Research Assistant with File Systems and Storage Lab under Prof. Erez Zadok.',
-            'Graduate Teaching Assistant for Programming Abstractions - CSE 216 under Prof. Ritwik Banerjee.',
+            'Graduate Teaching Assistant for Programming Abstractions - CSE 216 (Fall 2022 and Spring 2023) under Prof. Ritwik Banerjee.',
         ],
     }
 }

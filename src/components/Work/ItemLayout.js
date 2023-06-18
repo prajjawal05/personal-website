@@ -26,7 +26,7 @@ const StyledMeta = styled.div`
     text-align: right;
 `;
 
-const StyledInfo = styled.div`
+const StyledInfo = styled.li`
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -57,10 +57,6 @@ const StyledYear = styled(Title)`
 
 const StyledDescriptionItem = styled.li`
     text-align: left;
-    ::marker {
-        font-size: 0.7em;
-        color: black;
-    }
 `;
 
 const StyledImage = styled.img`
@@ -103,7 +99,7 @@ const WorkInfo = ({ cname, ...workInfo }) => {
             <ul style={{ "marginTop": "12px", "marginBottom": "36px" }}>
                 {projects.map((desc, index) =>
                     <StyledDescriptionItem key={index}>
-                        <StyledDescription>{desc}</StyledDescription>
+                        <StyledDescription italic>{desc}</StyledDescription>
                     </StyledDescriptionItem>
                 )}
             </ul>

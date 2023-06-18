@@ -12,7 +12,7 @@ const StyledCollapse = styled(Collapse)`
     background-color: #ffffff;
 `;
 
-const StyledWork = styled.div`
+const StyledWork = styled.ul`
     padding-left: 30px;
     padding-right: 0px;
     padding-top: 10px;
@@ -34,10 +34,10 @@ const Work = () => {
                         <StyledWork>
                             {
                                 WORKEX.map((work, workInd) => (
-                                    <>
+                                    <li>
                                         <WorkInfo key={workInd} {...work} cname={cname} />
                                         {workInd != WORKEX.length - 1 && <Divider />}
-                                    </>
+                                    </li>
                                 ))
                             }
 
