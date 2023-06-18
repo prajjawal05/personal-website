@@ -27,6 +27,5 @@ export default App;
 /* Todos:
 1. Make it mobile responsive?
 2. dark mode?
-3. say something different about the skills (add a tooltip probably stating the familiarity).
-4. change resume
+3. change resume
 */

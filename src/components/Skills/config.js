@@ -12,18 +12,23 @@ import es from '../../assets/elasticsearch.png';
 import pgsql from '../../assets/postgres.png';
 import dynamo from '../../assets/dynamo.png';
 import mysql from '../../assets/mysql.png';
+import redis from '../../assets/redis.png';
 
 import react from '../../assets/react.svg';
 import relay from '../../assets/relay.png';
 import redux from '../../assets/redux.png';
 import nodejs from '../../assets/nodejs.png';
+import flask from '../../assets/flask.png';
+import d3 from '../../assets/d3.png';
 
 import git from '../../assets/git.png';
 import docker from '../../assets/docker.webp';
+import azure from '../../assets/azure.png';
 import aws from '../../assets/aws.jpeg';
 import graphql from '../../assets/graphql.png';
 import grpc from '../../assets/grpc.png';
 import kuber from '../../assets/kuber.png';
+import kafka from '../../assets/kafka.jpeg';
 
 
 const SKILL_TYPE = {
@@ -71,6 +76,9 @@ const DB_CONFIG = [{
 }, {
     name: 'AWS DynamoDB',
     logo: dynamo,
+}, {
+    name: 'Redis',
+    logo: redis,
 }];
 
 const LIB_CONFIG = [{
@@ -85,6 +93,12 @@ const LIB_CONFIG = [{
 }, {
     name: 'Node.js',
     logo: nodejs,
+}, {
+    name: 'Flask (Python)',
+    logo: flask,
+}, {
+    name: 'd3.js',
+    logo: d3,
 }];
 
 const MISC_CONFIG = [{
@@ -97,6 +111,9 @@ const MISC_CONFIG = [{
     name: 'AWS',
     logo: aws,
 }, {
+    name: 'Azure',
+    logo: azure,
+}, {
     name: 'GraphQL',
     logo: graphql,
 }, {
@@ -105,6 +122,9 @@ const MISC_CONFIG = [{
 }, {
     name: 'Kubernetes',
     logo: kuber,
+}, {
+    name: 'Kafka',
+    logo: kafka,
 }];
 
 export const SKILLS_CONFIG = {

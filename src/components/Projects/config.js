@@ -6,7 +6,7 @@ const PROJECT_TYPE = {
 
 export const PROJECTS = {
     2023: [{
-        NAME: 'NYC Airbnb - A Data Driven Stay',
+        NAME: 'Comparing Mallocs',
         TYPE: PROJECT_TYPE.CLASSROOM,
         DURATION: 'Jan 2023 - May 2023',
         TECHNOLOGIES: [
@@ -15,7 +15,7 @@ export const PROJECTS = {
         DESCRIPTION: [
             'Compared the different memory allocators using a given set of benchmarks.',
         ],
-        GITHUB: 'https://github.com/prajjawal05/ny-aribnb',
+        GITHUB: 'https://github.com/prajjawal05/comparing-mallocs',
     }, {
         NAME: 'NYC Airbnb - A Data Driven Stay',
         TYPE: PROJECT_TYPE.CLASSROOM,
