@@ -25,7 +25,11 @@ export const PROJECTS = {
         ],
         DESCRIPTION: [
             'Created dashboards containing graphs like Starburst and NYC map to help tenants and homeowners.',
-            'The project was selected for Stars of CSE 564 Spring 2023 Playlist.',
+            <>The project was selected for Stars of CSE 564 Spring 2023 <a
+                className="App-link"
+                href={"https://www.youtube.com/playlist?list=PLyCRt3MN8s8MhiREiB0vV-aDhwx-huCb0"}
+                target="_blank"
+                rel="noopener noreferrer">Playlist</a>.</>,
         ],
         GITHUB: 'https://github.com/prajjawal05/ny-aribnb',
     }, {
