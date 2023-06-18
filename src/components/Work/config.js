@@ -14,9 +14,9 @@ const MKTX_WORKEX = [{
     JOB_TITLE: 'Software Engineer Intern',
     DURATION: 'Jun 2023 - Aug 2023',
     PROJECTS: [
-        "Collaborated with a team of tech interns to develop a trade ticket feature using MarketAxess' new technology stack.",
-        "Conducted a proof of concept project and worked closely with stakeholders to explore the feasibility and potential of the solution.",
-        "Assisted the Rates Tech team by completing small tasks within short sprints, contributing to the successful delivery of projects.",
+        "Collaborating with a team of tech interns to develop a trade ticket feature using MarketAxess' new technology stack.",
+        "Conducting a proof of concept project and working closely with stakeholders to explore the feasibility and potential of the solution.",
+        "Assisting the Rates Tech team by completing small tasks within short sprints, contributing to the successful delivery of projects.",
     ]
 }];
 
