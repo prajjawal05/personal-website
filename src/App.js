@@ -27,9 +27,6 @@ export default App;
 /* Todos:
 1. Make it mobile responsive?
 2. dark mode?
-3. complete the details (like for mktx).
-4. say something different about the skills (add a tooltip probably stating the familiarity).
-5. change resume
-6. modify about me.
-7. add cookies popup and save them locally in cookies.
+3. say something different about the skills (add a tooltip probably stating the familiarity).
+4. change resume
 */

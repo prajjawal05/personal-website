@@ -6,6 +6,29 @@ const PROJECT_TYPE = {
 
 export const PROJECTS = {
     2023: [{
+        NAME: 'NYC Airbnb - A Data Driven Stay',
+        TYPE: PROJECT_TYPE.CLASSROOM,
+        DURATION: 'Jan 2023 - May 2023',
+        TECHNOLOGIES: [
+            'Python', 'Linux', 'Perf', 'Shell', 'Valgrind'
+        ],
+        DESCRIPTION: [
+            'Compared the different memory allocators using a given set of benchmarks.',
+        ],
+        GITHUB: 'https://github.com/prajjawal05/ny-aribnb',
+    }, {
+        NAME: 'NYC Airbnb - A Data Driven Stay',
+        TYPE: PROJECT_TYPE.CLASSROOM,
+        DURATION: 'Jan 2023 - May 2023',
+        TECHNOLOGIES: [
+            'React', 'd3.js', 'Python', 'Flask'
+        ],
+        DESCRIPTION: [
+            'Created dashboards containing graphs like Starburst and NYC map to help tenants and homeowners.',
+            'The project was selected for Stars of CSE 564 Spring 2023 Playlist.',
+        ],
+        GITHUB: 'https://github.com/prajjawal05/ny-aribnb',
+    }, {
         NAME: 'Personal Website',
         TYPE: PROJECT_TYPE.PERSONAL,
         DURATION: 'Jan 2023',
