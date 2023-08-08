@@ -14,9 +14,8 @@ const MKTX_WORKEX = [{
     JOB_TITLE: 'Software Engineer Intern',
     DURATION: 'Jun 2023 - Aug 2023',
     PROJECTS: [
-        "Collaborating with a team of tech interns to develop a new Web SpringBoot service, utilizing modern technologies and improving the overall user experience.",
-        "Conducting a proof of concept project and working closely with stakeholders to explore the feasibility and potential of the solution.",
-        "Assisting the Rates Tech team by completing small tasks within short sprints, contributing to the successful delivery of projects.",
+        "Collaborated with other tech interns to design and develop workflows for an enhancement in a microservice architecture using Kafka, Redis, WebSockets, React, and Java SpringBoot.",
+        "Conducted a PoC project while working with stakeholders to explore the feasibility of a possible solution.",
     ]
 }];
 
