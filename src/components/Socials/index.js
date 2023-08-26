@@ -83,11 +83,13 @@ const Socials = () => (
                 <Email />
             </StyledLinks>
         </StyledSocial>
-        <StyledResume>
-            <StyledResumeBtn size="medium" type="primary">
-                <Text>Resume:&nbsp; <ContainerOutlined /></Text>
-            </StyledResumeBtn>
-        </StyledResume>
+        <a href={LINKS.RESUME} target="_blank" rel="noopener noreferrer" >
+            <StyledResume>
+                <StyledResumeBtn size="medium" type="primary">
+                    <Text>Resume:&nbsp; <ContainerOutlined /></Text>
+                </StyledResumeBtn>
+            </StyledResume>
+        </a>
     </>
 );
 

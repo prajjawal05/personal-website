@@ -34,7 +34,7 @@ function App() {
       <Layout style={{ backgroundColor: "white" }}>
         <Header currTab={tab} navigateTo={setTab} />
         <Body currTab={tab} navigateTo={setTab} />
-        <ResumePreview />
+        {/* <ResumePreview /> */}
         <Footer />
       </Layout>
     </ScreenContext.Provider>

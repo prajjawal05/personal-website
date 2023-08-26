@@ -35,13 +35,10 @@ const StyledRight = styled.div`
     flex-direction: column;
     justify-content: center;
 `;
-// #1d2536
-// #263249
 
 const StyledTitle = styled(Title)`
     letter-spacing: 4px;
-    white-space: nowrap;
-    padding-left: 50px;
+    white-space: pre-line;
 `;
 
 const StyledMore = styled(Title)`
@@ -62,7 +59,7 @@ const Home = () => {
                     <StyledTitle level={2}>
                         My name is Prajjawal Agarwal
                     </StyledTitle>
-                    <Title level={3} type="secondary" style={{ whiteSpace: "nowrap", margin: "12px 0" }}>I am a Software Engineer</Title>
+                    <Title level={3} type="secondary" style={{ whiteSpace: "pre-line", margin: "12px 0" }}>I am a Software Engineer</Title>
                     <br />
                     <Socials />
                 </StyledLeft>
