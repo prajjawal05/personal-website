@@ -49,7 +49,7 @@ export const TABS_CONFIG = {
     [TABS.SKILLS]: {
         title: 'Skills',
         header: <div><SettingTwoTone />&nbsp;&nbsp;Skills</div>,
-        // Component: Skills,
+        Component: Skills,
     },
     [TABS.CONCLUSION]: {
         title: '',

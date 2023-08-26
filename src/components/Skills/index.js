@@ -17,6 +17,7 @@ const StyledLogos = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
 `;
 
 const StyledImage = styled(Image)`
@@ -28,12 +29,12 @@ const Skills = () => (
     <StyledSkills>
         {Object.entries(SKILLS_CONFIG).map(([type, config]) => (
             <div key={type} style={{ marginBottom: "10px" }}>
-                <Title level={3} style={{textAlign: "left"}}>{config.title}</Title>
-                <Divider style={{marginTop: "0px"}} />
+                <Title level={3} style={{ textAlign: "left" }}>{config.title}</Title>
+                <Divider style={{ marginTop: "0px" }} />
                 <StyledLogos>
-                    {config.stacks.map(({name, logo}) => (
+                    {config.stacks.map(({ name, logo }) => (
                         <Tooltip title={name}>
-                            <StyledImage preview={false} src={logo} style={{height: "40px", width: "40px"}}/>
+                            <StyledImage preview={false} src={logo} style={{ height: "40px", width: "40px", marginBottom: "10px" }} />
                         </Tooltip>
                     ))}
                 </StyledLogos>
@@ -43,5 +44,3 @@ const Skills = () => (
 );
 
 export default Skills;
-
-// Todo: add a link to the resume
