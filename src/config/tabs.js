@@ -29,17 +29,17 @@ export const TABS_CONFIG = {
         title: 'About Me',
         menuTitle: <Avatar style={{ backgroundColor: '#0096FF' }} icon={<UserOutlined />} />,
         header: <div><IdcardTwoTone />&nbsp;&nbsp;About Me</div>,
-        // Component: AboutMe,
+        Component: AboutMe,
     },
     [TABS.EDUCATION]: {
         title: 'Education',
         header: <div><BookTwoTone />&nbsp;&nbsp;Education</div>,
-        // Component: Education,
+        Component: Education,
     },
     [TABS.WORK_EX]: {
         title: 'Experience',
         header: <div><PullRequestOutlined />&nbsp;&nbsp;Experience</div>,
-        // Component: Work,
+        Component: Work,
     },
     [TABS.PROJECTS]: {
         title: 'Projects',
@@ -54,7 +54,7 @@ export const TABS_CONFIG = {
     [TABS.CONCLUSION]: {
         title: '',
         header: <div></div>,
-        // Component: Conclusion,
+        Component: Conclusion,
     }
 };
 

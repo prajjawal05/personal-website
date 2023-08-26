@@ -10,7 +10,7 @@ const { Title, Text } = Typography;
 const StyledLayout = styled.div`
     display: flex;
     justify-content: space-around;
-    height: 70vh;
+    height: auto;
 `;
 
 

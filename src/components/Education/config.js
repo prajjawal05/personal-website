@@ -8,7 +8,8 @@ export const EDUCATION_CONFIG = {
         COLLEGE_NAME: 'Indian Institute of Information Technology Allahabad',
         DEGREE: 'Bachelor of Technology in Information Technology',
         LOCATION: 'UP, India',
-        DURATION: 'Jun 2015 - Jul 2019',
+        START: 'Jun 2015',
+        END: 'Jul 2019',
         RELEVANT_COURSES: [
             'Data Structures', 'Design and Analysis of Algorithms', 'Database Management Systems', 'Operating System', 'Object Oriented Methodologies', 'Computer Networks', 'Software Engineering', 'Compiler Design'
         ],
@@ -24,7 +25,8 @@ export const EDUCATION_CONFIG = {
         COLLEGE_NAME: 'SUNY Stony Brook University',
         DEGREE: 'Master of Science in Computer Science',
         LOCATION: 'NY, USA',
-        DURATION: 'Aug 2022 - May 2024',
+        START: 'Aug 2022',
+        END: 'May 2024',
         RELEVANT_COURSES: [
             'Distributed Systems', 'Human Computer Interaction', 'Operating Systems', 'Data Visualisation'
         ],
