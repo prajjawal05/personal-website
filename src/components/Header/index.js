@@ -78,7 +78,7 @@ const Layout = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", (e) => {
-            const active = Object.keys(TABS_CONFIG).findLast(isElementInView);
+            const active = Object.keys(TABS_CONFIG).find(isElementInView);
             setActiveTab(active);
         }, [])
     });
