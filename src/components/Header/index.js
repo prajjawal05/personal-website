@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 
 import { Layout as AntLayout, Menu, Image, Button } from 'antd';
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import logo from '../../assets/logo.png';
 import { TABS_CONFIG, CENTRAL_TABS, TABS } from "../../config/tabs";
+import { ScreenContext } from "../../config/context";
+
 import { isElementInView } from '../../utils';
 import {
     MenuFoldOutlined,
@@ -22,7 +24,7 @@ const StyledHeader = styled(Header)`
 
 const StyledMenu = styled(Menu)`
     justify-content: flex-end;
-    // min-width: 420px;
+    min-width: ${prop => prop.menuForMobile ? `0px` : `420px`};
 `;
 
 const StyledRight = styled.div`
@@ -41,6 +43,13 @@ const StyledLogo = styled(Image)`
 const Layout = () => {
     const [activeTab, setActiveTab] = useState(TABS.HOME);
     const [collapsed, setCollapsed] = useState(true);
+    const width = useContext(ScreenContext);
+    const menuForMobile = width < 700;
+
+    let showMenu = !menuForMobile;
+    if (menuForMobile) {
+        showMenu = !collapsed;
+    }
 
     const toggleCollapsed = () => {
         setCollapsed(!collapsed);
@@ -67,30 +76,34 @@ const Layout = () => {
                 <StyledLogo src={logo} style={{ height: "45px", width: "auto" }} preview={false} />
             </Link>
             <StyledRight>
-                <Button type="primary" onClick={toggleCollapsed} style={{ width: "64px", height: "64px", borderRadius: "0px" }}>
-                    {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-                </Button>
-                {!collapsed && <StyledMenu
-                    theme="light"
-                    // mode="horizontal"
-                    mode="inline"
-                    inlineCollapsed={collapsed}
-                    items={CENTRAL_TABS.map(tab => ({
-                        key: tab,
-                        label: (
-                            <Link activeClass="active"
-                                to={tab}
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}>
-                                <span>{TABS_CONFIG[tab].menuTitle || TABS_CONFIG[tab].title}</span>
-                            </Link>
-                        ),
-                    }))}
-                    selectedKeys={[activeTab]}
-                    style={{ borderBottom: "none", backgroundColor: "#f5f5f5" }}
-                />}
+                {menuForMobile &&
+                    <Button type="primary" onClick={toggleCollapsed} style={{ width: "64px", height: "64px", borderRadius: "0px" }}>
+                        {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+                    </Button>
+                }
+                {showMenu &&
+                    <StyledMenu
+                        theme="light"
+                        mode={menuForMobile ? "inline" : "horizontal"}
+                        menuForMobile={menuForMobile}
+                        inlineCollapsed={collapsed}
+                        items={CENTRAL_TABS.map(tab => ({
+                            key: tab,
+                            label: (
+                                <Link activeClass="active"
+                                    to={tab}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}>
+                                    <span>{TABS_CONFIG[tab].menuTitle || TABS_CONFIG[tab].title}</span>
+                                </Link>
+                            ),
+                        }))}
+                        selectedKeys={[activeTab]}
+                        style={{ borderBottom: "none", backgroundColor: "#f5f5f5" }}
+                    />
+                }
             </StyledRight>
         </StyledHeader>
     );
