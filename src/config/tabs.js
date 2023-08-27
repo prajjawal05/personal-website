@@ -44,7 +44,7 @@ export const TABS_CONFIG = {
     [TABS.PROJECTS]: {
         title: 'Projects',
         header: <div><CodeTwoTone />&nbsp;&nbsp;Projects</div>,
-        // Component: Projects,
+        Component: Projects,
     },
     [TABS.SKILLS]: {
         title: 'Skills',

@@ -44,3 +44,12 @@ const Skills = () => (
 );
 
 export default Skills;
+
+
+// remove hamburger for web
+// add image for mobile
+// menu click outside
+// menu active item
+// change resume link
+// preview resume
+// resume download

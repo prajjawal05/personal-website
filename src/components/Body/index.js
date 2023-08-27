@@ -18,6 +18,7 @@ const StyledTitle = styled(Title)`
 
 const StyledContent = styled(Content)`
     margin-top: 48px;
+    margin-bottom: 48px;
     // padding: 0 75px 50px 50px;
 `;
 
