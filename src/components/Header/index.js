@@ -110,7 +110,6 @@ const Layout = () => {
                             theme="light"
                             mode={menuForMobile ? "inline" : "horizontal"}
                             menuForMobile={menuForMobile}
-                            inlineCollapsed={collapsed}
                             items={CENTRAL_TABS.map(tab => ({
                                 key: tab,
                                 label: (
@@ -122,7 +121,7 @@ const Layout = () => {
                                         duration={500}
                                         onClick={() => setCollapsed(true)}
                                     >
-                                        <span>{TABS_CONFIG[tab].menuTitle || TABS_CONFIG[tab].title}</span>
+                                        <span>{(menuForMobile ? TABS_CONFIG[tab].mobileMenuTitle : TABS_CONFIG[tab].menuTitle) || TABS_CONFIG[tab].title}</span>
                                     </Link>
                                 ),
                             }))}
@@ -131,7 +130,6 @@ const Layout = () => {
                         />
                     </div>
                 }
-
             </StyledRight>
         </StyledHeader>
     );

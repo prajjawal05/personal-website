@@ -28,6 +28,7 @@ export const TABS_CONFIG = {
     [TABS.ABOUT_ME]: {
         title: 'About Me',
         menuTitle: <Avatar style={{ backgroundColor: '#0096FF' }} icon={<UserOutlined />} />,
+        mobileMenuTitle: 'About Me',
         header: <div><IdcardTwoTone />&nbsp;&nbsp;About Me</div>,
         Component: AboutMe,
     },

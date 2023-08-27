@@ -45,8 +45,6 @@ const Skills = () => (
 
 export default Skills;
 
-// hover over profile icon in web
-// about me instead of profile icon for mobile
 // add image for mobile
 // menu active item
 // change resume link
