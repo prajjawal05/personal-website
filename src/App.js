@@ -4,7 +4,7 @@ import { Layout } from 'antd';
 import Header from './components/Header';
 import Body from './components/Body';
 import Footer from './components/InfoFooter';
-import ResumePreview from './components/ResumePreview';
+// import ResumePreview from './components/ResumePreview';
 
 import { TABS } from './config/tabs';
 import { ScreenContext } from './config/context';
