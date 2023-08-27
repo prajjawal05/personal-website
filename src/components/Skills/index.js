@@ -45,7 +45,5 @@ const Skills = () => (
 
 export default Skills;
 
-// menu active item
-// change resume link
 // preview resume
 // resume download
