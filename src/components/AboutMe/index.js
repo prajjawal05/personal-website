@@ -9,6 +9,7 @@ const { Title, Text } = Typography;
 
 const StyledLayout = styled.div`
     display: flex;
+    flex-direction: ${prop => prop.horizontal ? "row" : "column"};
     justify-content: space-around;
     height: auto;
 `;
@@ -18,13 +19,14 @@ const StyledLeft = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 700px;
+    max-width: ${prop => prop.horizontal ? "900px" : ""};
 `;
 
 const StyledRight = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 80px 0;
 `;
 
 const StyledTitle = styled(Title)`
@@ -33,6 +35,7 @@ const StyledTitle = styled(Title)`
 
 const StyledDetails = styled(Text)`
     text-align: left;
+    padding: 0 25px;
 `;
 
 
@@ -52,8 +55,8 @@ const AboutMe = () => {
 
     return (
         <StyledAboutMe>
-            <StyledLayout>
-                <StyledLeft>
+            <StyledLayout horizontal={width > 1350}>
+                <StyledLeft horizontal={width > 1350}>
                     <StyledDetails>Hey there!
 
                         I'm Prajjawal Agarwal, a Graduate Student in Computer Science at Stony Brook University, NY, USA. With a passion for solving challenging problems and a love for working through the entire technology stack, I'm dedicated to making a positive impact in the world of computing.
@@ -68,11 +71,11 @@ const AboutMe = () => {
                         When I'm not immersed in coding and debugging, you can find me immersed in the world of music and anime. Music has the incredible ability to uplift my spirits and inspire creativity, while anime provides a perfect escape into captivating storylines and vibrant visuals. These interests keep me energized and balanced, allowing me to approach challenges with a fresh perspective.
                     </StyledDetails>
                 </StyledLeft>
-                {width >= 1500 &&
-                    <StyledRight>
-                        <Image src={personalImg} style={{ height: "400px", width: "550px", marginLeft: "10px" }} preview={false} />
-                    </StyledRight>
-                }
+                {/* {width >= 1500 && */}
+                <StyledRight>
+                    <Image src={personalImg} style={{ maxHeight: "400px", maxWidth: "550px" }} preview={false} />
+                </StyledRight>
+                {/* } */}
             </StyledLayout>
         </StyledAboutMe>
     )
