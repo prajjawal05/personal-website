@@ -8,7 +8,8 @@ export const PROJECTS = {
     2023: [{
         NAME: 'Comparing Mallocs',
         TYPE: PROJECT_TYPE.CLASSROOM,
-        DURATION: 'Jan 2023 - May 2023',
+        START: 'Jan 2023',
+        END: 'May 2023',
         TECHNOLOGIES: [
             'Python', 'Linux', 'Perf', 'Shell', 'Valgrind'
         ],
@@ -19,7 +20,8 @@ export const PROJECTS = {
     }, {
         NAME: 'NYC Airbnb - A Data Driven Stay',
         TYPE: PROJECT_TYPE.CLASSROOM,
-        DURATION: 'Jan 2023 - May 2023',
+        START: 'Jan 2023',
+        END: 'May 2023',
         TECHNOLOGIES: [
             'React', 'd3.js', 'Python', 'Flask'
         ],
@@ -35,7 +37,8 @@ export const PROJECTS = {
     }, {
         NAME: 'Personal Website',
         TYPE: PROJECT_TYPE.PERSONAL,
-        DURATION: 'Jan 2023',
+        START: 'Jan 2023',
+        END: 'Present',
         TECHNOLOGIES: [
             'React', 'CSS'
         ],
@@ -46,7 +49,8 @@ export const PROJECTS = {
     2022: [{
         NAME: 'Fault Tolerant Sharded Key Value Store',
         TYPE: PROJECT_TYPE.CLASSROOM,
-        DURATION: 'Sep 2022 - Dec 2022',
+        START: 'Sep 2022',
+        END: 'Dec 2022',
         TECHNOLOGIES: [
             'C++'
         ],
@@ -58,7 +62,8 @@ export const PROJECTS = {
     }, {
         NAME: 'Smart Audio Book reader',
         TYPE: PROJECT_TYPE.CLASSROOM,
-        DURATION: 'Sep 2022 - Dec 2022',
+        START: 'Sep 2022',
+        END: 'Dec 2022',
         TECHNOLOGIES: [
             'Kivy',
             'Python',
@@ -74,7 +79,7 @@ export const PROJECTS = {
     2020: [{
         NAME: 'Reaction Maker',
         TYPE: PROJECT_TYPE.PERSONAL,
-        DURATION: 'Jul 2020',
+        START: 'Jul 2020',
         TECHNOLOGIES: [
             'Python', 'React', 'AWS DynamoDB', 'AWS Cloudfront', 'AWS Lambda'
         ],
@@ -87,7 +92,8 @@ export const PROJECTS = {
     2018: [{
         NAME: 'Learning Based CPU Frequency Governor ',
         TYPE: PROJECT_TYPE.RESEARCH,
-        DURATION: 'Jan 2018 – Jun 2018',
+        START: 'Jan 2018',
+        END: 'Jun 2018',
         INFO: 'Contact me to get access to the paper and report.',
         TECHNOLOGIES: [
             'Linux', 'C++'
@@ -100,7 +106,8 @@ export const PROJECTS = {
     2017: [{
         NAME: 'Modelling Synchronization in Many-Core Processors',
         TYPE: PROJECT_TYPE.RESEARCH,
-        DURATION: 'Aug 2017 - Nov 2017',
+        START: 'Aug 2017',
+        END: 'Nov 2017',
         INFO: 'Contact me to get access to the paper and report.',
         TECHNOLOGIES: [
             'Petrinet', 'Markov Chain'
@@ -111,7 +118,8 @@ export const PROJECTS = {
     }, {
         NAME: 'Laptop Recommendation Expert Systems',
         TYPE: PROJECT_TYPE.CLASSROOM,
-        DURATION: 'Aug 2017 - Nov 2017',
+        START: 'Aug 2017',
+        END: 'Nov 2017',
         TECHNOLOGIES: [
             'Prolog'
         ],
@@ -123,7 +131,8 @@ export const PROJECTS = {
     }, {
         NAME: 'Grade Portal',
         TYPE: PROJECT_TYPE.CLASSROOM,
-        DURATION: 'Aug 2017 - Nov 2017',
+        START: 'Aug 2017',
+        END: 'Nov 2017',
         TECHNOLOGIES: [
             'Java', 'Java Swing', 'JDBC'
         ],
@@ -136,7 +145,8 @@ export const PROJECTS = {
     2016: [{
         NAME: 'Human Resource Management System',
         TYPE: PROJECT_TYPE.CLASSROOM,
-        DURATION: 'Aug 2016 - Nov 2016',
+        START: 'Aug 2016',
+        END: 'Nov 2016',
         TECHNOLOGIES: [
             'Java', 'Java Swing', 'JDBC'
         ],

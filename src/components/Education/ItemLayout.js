@@ -78,7 +78,7 @@ const Content = ({ type }) => (
 
 
 const Header = ({ type }) => {
-    const { COLLEGE_NAME: name, LOCATION: location, DURATION: duration, DEGREE: degree } = EDUCATION_CONFIG[type]; 
+    const { COLLEGE_NAME: name, LOCATION: location, START: start, END: end, DEGREE: degree } = EDUCATION_CONFIG[type];
     return (
         <StyledLayout>
             <StyledInfo>
@@ -87,7 +87,9 @@ const Header = ({ type }) => {
             </StyledInfo>
             <StyledMeta>
                 <Text type="secondary">{location}</Text>
-                <Text type="secondary">{duration}</Text>
+                <Text type="secondary">
+                    <span style={{ display: "inline-block" }}>{start}</span> - <span style={{ display: "inline-block" }}>{end}</span>
+                </Text>
             </StyledMeta>
         </StyledLayout>
     );

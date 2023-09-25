@@ -18,7 +18,8 @@ const StyledTitle = styled(Title)`
 
 const StyledContent = styled(Content)`
     margin-top: 48px;
-    padding: 0 75px 50px 50px;
+    margin-bottom: 48px;
+    // padding: 0 75px 50px 50px;
 `;
 
 
@@ -36,14 +37,14 @@ const StyledMore = styled(Title)`
 const Body = () => {
     return (
         <div className="App">
-            <header>
+            <div style={{ width: "90%" }}>
                 {useMemo(() => Object.entries(TABS_CONFIG).map(([tab, { header, Component }]) => (
-                    <StyledContent id={tab}>
+                    !!Component && (<StyledContent id={tab}>
                         {!!header && <StyledTitle level={1}>{header}</StyledTitle>}
                         <Fade>
                             <Component />
                         </Fade>
-                    </StyledContent>
+                    </StyledContent>)
                 )), [])}
 
                 <Link
@@ -62,7 +63,7 @@ const Body = () => {
                         Go back to top
                     </StyledMore>
                 </Link>
-            </header>
+            </div>
         </div>
     );
 };

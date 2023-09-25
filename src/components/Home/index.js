@@ -1,5 +1,6 @@
+import { useContext } from "react";
 import styled from "styled-components";
-import { Typography, Image } from "antd";
+import { Typography, Image, Button } from "antd";
 
 import { DownOutlined, ContainerOutlined } from "@ant-design/icons";
 import { Link } from "react-scroll";
@@ -12,6 +13,8 @@ import { LINKS } from "../../config/links";
 import home from '../../assets/home.gif';
 // import home from '../../assets/night-home.gif';
 import { TABS } from "../../config/tabs";
+import { ScreenContext } from "../../config/context";
+
 
 const { Text, Title } = Typography;
 
@@ -32,14 +35,10 @@ const StyledRight = styled.div`
     flex-direction: column;
     justify-content: center;
 `;
-// #1d2536
-// #263249
 
 const StyledTitle = styled(Title)`
     letter-spacing: 4px;
-    white-space: nowrap;
-    padding-left: 50px;
-    // color: white;
+    white-space: pre-line;
 `;
 
 const StyledMore = styled(Title)`
@@ -51,17 +50,8 @@ const StyledMore = styled(Title)`
         color: blue;
     }
 `;
-
-const Resume = () => (
-    <a
-        className="App-link"
-        href={LINKS.RESUME}
-        target="_blank"
-        rel="noopener noreferrer"><ContainerOutlined /></a>
-);
-
-
 const Home = () => {
+    const width = useContext(ScreenContext);
     return (
         <>
             <StyledLayout>
@@ -69,17 +59,16 @@ const Home = () => {
                     <StyledTitle level={2}>
                         My name is Prajjawal Agarwal
                     </StyledTitle>
-                    <Title level={3} type="secondary" style={{ whiteSpace: "nowrap", margin: "12px 0" }}>I am a Software Engineer</Title>
+                    <Title level={3} type="secondary" style={{ whiteSpace: "pre-line", margin: "12px 0" }}>I am a Software Engineer</Title>
                     <br />
                     <Socials />
                 </StyledLeft>
-                <StyledRight>
-                    <Image src={home} style={{ height: "400px", width: "auto" }} preview={false} />
-                    <div>
-                        <Text>Resume:&nbsp; <Resume /></Text>
-                    </div>
-                </StyledRight>
-            </StyledLayout>
+                {width >= 1100 &&
+                    <StyledRight>
+                        <Image src={home} style={{ height: "400px", width: "550px" }} preview={false} />
+                    </StyledRight>
+                }
+            </StyledLayout >
             <Link
                 activeClass="active"
                 to={TABS.ABOUT_ME}

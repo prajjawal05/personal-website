@@ -82,7 +82,7 @@ const StyledLink = styled.a`
 
 
 const WorkInfo = ({ cname, ...workInfo }) => {
-    const { JOB_TITLE: title, DURATION: duration, PROJECTS: projects } = workInfo;
+    const { JOB_TITLE: title, DURATION: duration, PROJECTS: projects, START: start, END: end } = workInfo;
     const { WORKEX: workex } = COMPANY_CONFIGS[cname];
 
     return (
@@ -92,7 +92,9 @@ const WorkInfo = ({ cname, ...workInfo }) => {
                     <StyledName level={4}>{title}</StyledName>
                 </StyledInfo>
                 {workex.length > 1 && <StyledMeta>
-                    <Text type="secondary">{duration}</Text>
+                    <Text type="secondary">
+                        <span style={{ display: "inline-block" }}>{start}</span> - <span style={{ display: "inline-block" }}>{end}</span>
+                    </Text>
                 </StyledMeta>
                 }
             </StyledProjectMeta>
@@ -108,7 +110,7 @@ const WorkInfo = ({ cname, ...workInfo }) => {
 };
 
 const CompanyInfo = ({ cname }) => {
-    const { NAME: name, LOCATION: location, DURATION: duration, LINK: link, LOGO: logo } = COMPANY_CONFIGS[cname];
+    const { NAME: name, LOCATION: location, DURATION: duration, LINK: link, LOGO: logo, START: start, END: end } = COMPANY_CONFIGS[cname];
     return (
         <StyledLayout>
             <StyledInfo>
@@ -125,7 +127,9 @@ const CompanyInfo = ({ cname }) => {
             </StyledInfo>
             <StyledMeta>
                 <Text type="secondary">{location}</Text>
-                <Text type="secondary">{duration}</Text>
+                <Text type="secondary">
+                    <span style={{ display: "inline-block" }}>{start}</span> - <span style={{ display: "inline-block" }}>{end}</span>
+                </Text>
             </StyledMeta>
         </StyledLayout>
     );
