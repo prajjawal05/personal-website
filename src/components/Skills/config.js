@@ -13,12 +13,14 @@ import pgsql from '../../assets/postgres.png';
 import dynamo from '../../assets/dynamo.png';
 import mysql from '../../assets/mysql.png';
 import redis from '../../assets/redis.png';
+import mongo from '../../assets/mongo.png';
 
 import react from '../../assets/react.svg';
 import relay from '../../assets/relay.png';
 import redux from '../../assets/redux.png';
 import nodejs from '../../assets/nodejs.png';
 import flask from '../../assets/flask.png';
+import django from '../../assets/django.png';
 import d3 from '../../assets/d3.png';
 
 import git from '../../assets/git.png';
@@ -79,6 +81,9 @@ const DB_CONFIG = [{
 }, {
     name: 'Redis',
     logo: redis,
+}, {
+    name: 'MongoDB',
+    logo: mongo,
 }];
 
 const LIB_CONFIG = [{
@@ -96,6 +101,9 @@ const LIB_CONFIG = [{
 }, {
     name: 'Flask (Python)',
     logo: flask,
+}, {
+    name: 'Django (Python)',
+    logo: django,
 }, {
     name: 'd3.js',
     logo: d3,

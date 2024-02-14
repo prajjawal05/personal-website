@@ -6,6 +6,21 @@ const PROJECT_TYPE = {
 
 export const PROJECTS = {
     2023: [{
+        NAME: 'PicNix: Image Deduplicating architecture for the web',
+        TYPE: PROJECT_TYPE.CLASSROOM,
+        START: 'Aug 2023',
+        END: 'Dec 2023',
+        TECHNOLOGIES: [
+            'Django', 'React', 'Celery', 'Redis', 'OpenCV'
+        ],
+        DESCRIPTION: [
+            'Built a social media-like application with React as the frontend and Django as the backend.',
+            'When images are uploaded, a task is pushed to a queue made using Celery and Redis.',
+            'The processor listening to the queue would process the image using OpenCV functionalities and store details like the number of copies and similar images.',
+            'If an image already exists with other posts, the new image will not be saved in the file storage.',
+        ],
+        GITHUB: 'https://github.com/prajjawal05/nft-ui',
+    }, {
         NAME: 'Comparing Mallocs',
         TYPE: PROJECT_TYPE.CLASSROOM,
         START: 'Jan 2023',
