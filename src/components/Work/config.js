@@ -4,11 +4,21 @@ import fsllogo from '../../assets/fsllogo.png';
 
 
 export const COMPANIES = {
+    FSL_STONY_BROOK_AP: "FSL_STONY_BROOK_AP",
     MARKETAXESS: "MARKETAXESS",
-    FSL_STONY_BROOK: "FSL_STONY_BROOK",
+    FSL_STONY_BROOK_IS: "FSL_STONY_BROOK_IS",
     MINDTICKLE: "MINDTICKLE",
 }
 
+const FSL_WORKEX_AP = [{
+    JOB_TITLE: 'Graduate Research Assistant',
+    START: 'Aug 2023',
+    END: 'May 2024',
+    PROJECTS: [
+        'Verified usage of Mutation Admission Controllers in the OpenWhisk platform deployed locally on a kind cluster.',
+        'Constructed a video transcoding workflow using the Orchestrator pattern, achieving 15% faster processing of large video files through concurrent processing of dynamic segments while also using MongoDB to save parameters required for automated retries.',
+    ]
+}];
 
 const MKTX_WORKEX = [{
     JOB_TITLE: 'Software Engineer Intern',
@@ -20,7 +30,7 @@ const MKTX_WORKEX = [{
     ]
 }];
 
-const FSL_WORKEX = [{
+const FSL_WORKEX_IS = [{
     JOB_TITLE: 'Graduate Research Assistant',
     START: 'Jan 2023',
     END: 'May 2023',
@@ -59,6 +69,15 @@ const MINDTICKLE_WORKEX = [{
 }];
 
 export const COMPANY_CONFIGS = {
+    [COMPANIES.FSL_STONY_BROOK_AP]: {
+        NAME: 'File Systems and Storage Lab, Stony Brook University (in collaboration with IBM Research - Almaden)',
+        LINK: 'https://www.fsl.cs.sunysb.edu/',
+        LOCATION: 'NY, USA',
+        START: 'Aug 2023',
+        END: 'May 2024',
+        LOGO: fsllogo,
+        WORKEX: FSL_WORKEX_AP,
+    },
     [COMPANIES.MARKETAXESS]: {
         NAME: <span style={{ whiteSpace: "nowrap" }}>MarketAxess</span>,
         LINK: 'https://www.linkedin.com/company/marketaxess/',
@@ -68,14 +87,14 @@ export const COMPANY_CONFIGS = {
         LOGO: mktxlogo,
         WORKEX: MKTX_WORKEX,
     },
-    [COMPANIES.FSL_STONY_BROOK]: {
-        NAME: 'File Systems and Storage Lab, Stony Brook University',
+    [COMPANIES.FSL_STONY_BROOK_IS]: {
+        NAME: 'File Systems and Storage Lab, Stony Brook University (in collaboration with IBM Research - Almaden)',
         LINK: 'https://www.fsl.cs.sunysb.edu/',
         LOCATION: 'NY, USA',
         START: 'Jan 2023',
         END: 'May 2023',
         LOGO: fsllogo,
-        WORKEX: FSL_WORKEX,
+        WORKEX: FSL_WORKEX_IS,
     },
     [COMPANIES.MINDTICKLE]: {
         NAME: <span style={{ whiteSpace: "nowrap" }}>MindTickle</span>,

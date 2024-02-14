@@ -28,10 +28,11 @@ export const EDUCATION_CONFIG = {
         START: 'Aug 2022',
         END: 'May 2024',
         RELEVANT_COURSES: [
-            'Distributed Systems', 'Human Computer Interaction', 'Operating Systems', 'Data Visualisation'
+            'Distributed Systems', 'Human Computer Interaction', 'Operating Systems', 'Data Visualisation', 'Analysis of Algorithms', 'Big Data Systems, Algorithms and Networks'
         ],
         EXTRA_CURRICULARS: [
             'Graduate Teaching Assistant for Programming Abstractions - CSE 216 (Fall 2022 and Spring 2023) under Prof. Ritwik Banerjee.',
+            'Mentored for HopperHacks 2024, a hackathon organised by Women in Computer Science (ACM) at Stony Brook University.'
         ],
     }
 }
